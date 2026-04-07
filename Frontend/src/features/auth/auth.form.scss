@@ -1,3 +1,4 @@
+@use "sass:color";
 $bg-page:        #09090b;
 $bg-card:        #121214;
 $bg-input:       #18181b;
@@ -35,7 +36,7 @@ main {
         transition: box-shadow 0.3s ease;
 
         &:hover {
-            box-shadow: 0 10px 50px -10px rgba($accent, 0.1);
+            box-shadow: 0 10px 50px -10px color.change($accent, $alpha: 0.1);
         }
 
         h1 {
@@ -82,7 +83,7 @@ main {
 
             &:focus {
                 border-color: $accent;
-                background-color: rgba($accent, 0.05);
+                background-color: color.change($accent, $alpha: 0.05);
             }
         }
     }
@@ -102,17 +103,17 @@ main {
         cursor: pointer;
         transition: all 0.2s ease;
         font-family: $font-stack;
-        box-shadow: 0 4px 15px rgba($accent, 0.3);
+        box-shadow: 0 4px 15px color.change($accent, $alpha: 0.3);
         margin-top: 0.5rem;
 
         &:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba($accent, 0.4);
+            box-shadow: 0 6px 20px color.change($accent, $alpha: 0.4);
         }
 
         &:active {
             transform: scale(0.98);
-            box-shadow: 0 2px 10px rgba($accent, 0.3);
+            box-shadow: 0 2px 10px color.change($accent, $alpha: 0.3);
         }
     }
 

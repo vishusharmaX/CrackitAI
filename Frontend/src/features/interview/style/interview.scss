@@ -1,3 +1,4 @@
+@use "sass:color";
 // ── Shared Variables (mirrors home.scss theme) ────────────────────────────────
 $bg-page: #0d1117;
 $bg-card: #161b22;
@@ -94,7 +95,7 @@ $severity-low: #3fb950;
         }
 
         &--active {
-            background-color: rgba($accent, 0.1);
+            background-color: color.change($accent, $alpha: 0.1);
             color: $accent;
 
             .interview-nav__icon svg {
@@ -189,8 +190,8 @@ $severity-low: #3fb950;
         font-size: 0.7rem;
         font-weight: 700;
         color: $accent;
-        background-color: rgba($accent, 0.1);
-        border: 1px solid rgba($accent, 0.2);
+        background-color: color.change($accent, $alpha: 0.1);
+        border: 1px solid color.change($accent, $alpha: 0.2);
         border-radius: 0.3rem;
         padding: 0.15rem 0.4rem;
         margin-top: 2px;
@@ -250,14 +251,14 @@ $severity-low: #3fb950;
 
         &--intention {
             color: #a78bfa;
-            background-color: rgba(#a78bfa, 0.1);
-            border: 1px solid rgba(#a78bfa, 0.2);
+            background-color: color.change(#a78bfa, $alpha: 0.1);
+            border: 1px solid color.change(#a78bfa, $alpha: 0.2);
         }
 
         &--answer {
             color: #3fb950;
-            background-color: rgba(#3fb950, 0.1);
-            border: 1px solid rgba(#3fb950, 0.2);
+            background-color: color.change(#3fb950, $alpha: 0.1);
+            border: 1px solid color.change(#3fb950, $alpha: 0.2);
         }
     }
 }
@@ -277,7 +278,7 @@ $severity-low: #3fb950;
         top: 0;
         bottom: 0;
         width: 2px;
-        background: linear-gradient(to bottom, $accent, rgba($accent, 0.1));
+        background: linear-gradient(to bottom, $accent, color.change($accent, $alpha: 0.1));
         border-radius: 1px;
     }
 }
@@ -312,8 +313,8 @@ $severity-low: #3fb950;
         font-size: 0.7rem;
         font-weight: 700;
         color: $accent;
-        background-color: rgba($accent, 0.1);
-        border: 1px solid rgba($accent, 0.25);
+        background-color: color.change($accent, $alpha: 0.1);
+        border: 1px solid color.change($accent, $alpha: 0.25);
         padding: 0.1rem 0.5rem;
         border-radius: 2rem;
     }
@@ -461,19 +462,19 @@ $severity-low: #3fb950;
 
     &--high {
         color: $severity-high;
-        background-color: rgba($severity-high, 0.1);
-        border-color: rgba($severity-high, 0.25);
+        background-color: color.change($severity-high, $alpha: 0.1);
+        border-color: color.change($severity-high, $alpha: 0.25);
     }
 
     &--medium {
         color: $severity-medium;
-        background-color: rgba($severity-medium, 0.1);
-        border-color: rgba($severity-medium, 0.25);
+        background-color: color.change($severity-medium, $alpha: 0.1);
+        border-color: color.change($severity-medium, $alpha: 0.25);
     }
 
     &--low {
         color: $severity-low;
-        background-color: rgba($severity-low, 0.1);
-        border-color: rgba($severity-low, 0.25);
+        background-color: color.change($severity-low, $alpha: 0.1);
+        border-color: color.change($severity-low, $alpha: 0.25);
     }
 }
